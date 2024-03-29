@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data></data>
+
+    <RelativeLayout
+        android:id="@+id/rly_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="230dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/main_shape_bg_hei"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:text="提示"
+                android:textColor="@color/main_333333"
+                android:textSize="@dimen/main_text_17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_desc_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="23dp"
+                android:gravity="center"
+                android:text="退出登录后将无法及时接收比赛消息确定退出登录吗？"
+                android:textColor="@color/main_color_82849d"
+                android:textSize="@dimen/main_text_14sp" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bt_left_dialog"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/main_shape_f2f4f7_20dp"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="@color/main_999999"
+                    android:textSize="@dimen/main_text_16sp" />
+
+
+                <TextView
+                    android:id="@+id/bt_right_dialog"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/main_shape_7d77ff_20dp"
+                    android:gravity="center"
+                    android:text="确认"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/main_text_16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

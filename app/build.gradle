@@ -1,0 +1,113 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+
+    signingConfigs {
+        debug {
+            storeFile file('..\\app\\key.jks')
+            storePassword 'android'
+            keyAlias 'key0'
+            keyPassword 'android'
+        }
+        release {
+            storeFile file('..\\app\\key.jks')
+            storePassword 'android'
+            keyPassword 'android'
+            keyAlias 'key0'
+        }
+    }
+    lintOptions {
+
+        checkReleaseBuilds false
+
+    }
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion 16
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+//    dataBinding {
+//        enabled = true
+//    }
+    buildFeatures {
+        dataBinding = true
+    }
+}
+
+//kapt {  // kapt 配置
+//    generateStubs = true
+//}
+
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    api rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    api rootProject.ext.dependencies["smartRefresh"]
+    api rootProject.ext.dependencies["smart-header"]
+    api rootProject.ext.dependencies["smart-footer"]
+
+    implementation 'io.github.scwang90:refresh-header-radar:2.1.0'       //雷达刷新头
+    implementation 'io.github.scwang90:refresh-header-falsify:2.1.0'     //虚拟刷新头
+    implementation 'io.github.scwang90:refresh-header-material:2.1.0'    //谷歌刷新头
+    implementation 'io.github.scwang90:refresh-header-two-level:2.1.0'   //二级刷新头
+    implementation 'io.github.scwang90:refresh-footer-ball:2.1.0'        //球脉冲加载
+
+    // 协程依赖包
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
+    // LifecycleScope
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
+
+    // 协程Android支持库
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+
+    // 第三方导航
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    //沉浸式实现
+    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+
+    //网络请求
+    api 'com.squareup.retrofit2:retrofit:2.6.1'
+    api 'com.squareup.retrofit2:converter-gson:2.6.1'
+
+    //gson解析
+    api 'com.google.code.gson:gson:2.10.1'
+
+
+
+
+}

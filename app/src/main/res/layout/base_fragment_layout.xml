@@ -1,0 +1,55 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--        <com.drz.base.views.HeaderViewLayout-->
+        <!--            android:id="@+id/ll_headLayout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="vertical"-->
+        <!--            android:visibility="gone" />-->
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/ll_top_layout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@+id/ll_headLayout"-->
+        <!--            android:orientation="vertical"-->
+        <!--            android:visibility="gone" />-->
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smart.refresh.header.MaterialHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recylerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#00000000"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <com.scwang.smart.refresh.footer.BallPulseFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+    </RelativeLayout>
+
+</layout>
