@@ -5,7 +5,7 @@ ext {
             buildToolsVersion: '26.1.1',
             minSdkVersion    : 16,
             targetSdkVersion : 30,
-            applicationId    : "com.mine.project.carTest",
+            applicationId    : "com.mine.project.content",
             versionCode      : 200,
             versionName      : "2.0.0",
 

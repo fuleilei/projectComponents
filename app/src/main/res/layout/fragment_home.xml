@@ -6,7 +6,7 @@
 
         <variable
             name="user"
-            type="com.mine.project.carTest.bean.UserBean" />
+            type="com.mine.project.content.bean.UserBean" />
     </data>
 
 
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.mine.project.carTest.view.HeaderViewLayout
+        <com.mine.project.content.view.HeaderViewLayout
             android:id="@+id/ly_head_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

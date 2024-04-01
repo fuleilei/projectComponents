@@ -1,2 +1,3 @@
-include ':app',':projectground'
-rootProject.name = "carTest"
+include ':app'
+rootProject.name = "projectComponents"
+include ':projectlibrary'

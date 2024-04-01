@@ -6,7 +6,7 @@
     <data>
      <variable
          name="user"
-         type="com.mine.project.carTest.bean.UserBean" />
+         type="com.mine.project.content.bean.UserBean" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
